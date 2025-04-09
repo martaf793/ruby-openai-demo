@@ -4,20 +4,22 @@ require "dotenv/load"
 
 client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_API_KEY"))
 
-user_question=gets.comp
+
 
 # Prepare an Array of previous messages
 message_list = [
   {
     "role" => "system",
     "content" => "Hello! How can I help you today?"
-  },
+  }
+]
+pp message_list.fetch("content").to_s
+user_question=gets.chomp
+message_list.push(
   {
     "role" => "user",
     "content" => user_question
-  }
-]
-message_list.push(
+  },
   {:role=> "user", :content =>"What about NYC?"}
 )
 # Call the API to get the next message from GPT
