@@ -36,11 +36,11 @@ while user_question!="bye"
   end
 end
 
-#HOW I DID UNTIL STEP 2. It woked the same. Understood that step3 was creating a "conversation" value, with all chat history.
+##HOW I DID UNTIL STEP 2. It woked the same. Understood that step3 was creating a "conversation" value, with all chat history.
 # require "openai"
 # require "dotenv/load"
 # client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_API_KEY"))
-#Prepare an Array of previous messages
+##Prepare an Array of previous messages
 # message_list = [
 #    {
 #      "role" => "system",
@@ -58,7 +58,7 @@ end
 #      "content" => user_question
 #    }
 #  )
-#Call the API to get the next message from GPT
+##Call the API to get the next message from GPT
 #  api_response = client.chat(
 #    parameters: {
 #      model: "gpt-3.5-turbo",
@@ -70,5 +70,5 @@ end
 # end 
  
 
-# next_message=api_response.fetch("choices").at(0).fetch("message")
-# pp conversation=message_list.push(next_message)
+## next_message=api_response.fetch("choices").at(0).fetch("message")
+## pp conversation=message_list.push(next_message)
