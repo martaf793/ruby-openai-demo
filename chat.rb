@@ -37,29 +37,28 @@ while user_question!="bye"
 end
 
 #HOW I DID UNTIL STEP 2. It woked the same. Understood that step3 was creating a "conversation" value, with all chat history.
-#require "openai"
-#require "dotenv/load"
-#client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_API_KEY"))
-# Prepare an Array of previous messages
-#message_list = [
+# require "openai"
+# require "dotenv/load"
+# client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_API_KEY"))
+#Prepare an Array of previous messages
+# message_list = [
 #    {
 #      "role" => "system",
 #      "content" => "Hello! How can I help you today?"
 #    }
 #  ]
-#user_question=""
-#while user_question!="bye"
+# user_question=""
+# while user_question!="bye"
 #    pp message_list.at(0).fetch("content") 
 #    pp "-"*50
 #  user_question=gets.chomp
-#  
 #  message_list.push(
 #    {
 #      "role" => "user",
 #      "content" => user_question
 #    }
 #  )
-# Call the API to get the next message from GPT
+#Call the API to get the next message from GPT
 #  api_response = client.chat(
 #    parameters: {
 #      model: "gpt-3.5-turbo",
@@ -67,7 +66,9 @@ end
 #    }
 #  )
 #  pp api_response.fetch("choices").at(0).fetch("message").fetch("content").chomp
-#  pp "-"*50
+#  pp "-"*50 
+# end 
+ 
 
-#next_message=api_response.fetch("choices").at(0).fetch("message")
-#pp conversation=message_list.push(next_message)
+# next_message=api_response.fetch("choices").at(0).fetch("message")
+# pp conversation=message_list.push(next_message)
