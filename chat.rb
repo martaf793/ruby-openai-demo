@@ -36,7 +36,7 @@ while user_question!="bye"
   end
 end
 
-##HOW I DID UNTIL STEP 2. It woked the same. Understood that step3 was creating a "conversation" value, with all chat history.
+##HOW I DID. It woked the same. Understood that step3 was creating a "conversation" value, with all chat history.
 # require "openai"
 # require "dotenv/load"
 # client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_API_KEY"))
